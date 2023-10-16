@@ -3,9 +3,9 @@ from sqlalchemy.orm import sessionmaker
 from models import Students, Marks, Subjects
 
 
-engine = sqlalchemy.create_engine("postgresql+psycopg2://username:password@localhost:5432/journal_app")
+engine = sqlalchemy.create_engine("postgresql+psycopg2://journal:journal@localhost:5432/journal")
 Session = sessionmaker(bind=engine)
-session = Session
+session = Session()
 
 
 def student_list() -> list:
